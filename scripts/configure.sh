@@ -16,7 +16,7 @@ sudo dpkg -i turbovnc_2.2.5_amd64.deb
 
 # Third, download ngrok
 wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
-unzip ngrok-stable-linux-amd64.zip
+sudo tar -xvzf ~/Downloads/ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
 chmod +x ngrok
 
 # Fourth, generate and copy passwd file and xstartup script
