@@ -27,6 +27,15 @@ echo $VNC_PASSWORD | vncpasswd -f > $HOME/.vnc/passwd
 chmod 0600 $HOME/.vnc/passwd
 
 # Fifth and last, set up auth token from argument
-sudo ./ngrok update
-sudo ./ngrok authtoken 23JbfqLdFuwVFwF8u21e4ooV6On_6923mqy5dGNAbqPutzvYb
+#sudo ./ngrok update
+#sudo ./ngrok authtoken 23JbfqLdFuwVFwF8u21e4ooV6On_6923mqy5dGNAbqPutzvYb
+wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./chrome-remote-desktop_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+sudo DEBIAN_FRONTEND=noninteractive \
+    sudo apt install --assume-yes xfce4 desktop-base dbus-x11 xscreensaver
+sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
+sudo systemctl disable lightdm.service
+DISPLAY= /opt/google/chrome-remote-desktop/start-host --code="4/0AVG7fiQPxR4VxU6bhxG3Fzn1QEb9JI-qphsXzyuyZCnH4yAvTK9xWWRORex1PQF2s_LDnw" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$(hostname)
 exit
