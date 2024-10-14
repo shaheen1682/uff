@@ -27,7 +27,6 @@ echo $VNC_PASSWORD | vncpasswd -f > $HOME/.vnc/passwd
 chmod 0600 $HOME/.vnc/passwd
 
 # Fifth and last, set up auth token from argument
-#sudo ./ngrok update
-#sudo ./ngrok authtoken 23JbfqLdFuwVFwF8u21e4ooV6On_6923mqy5dGNAbqPutzvYb
-DISPLAY= /opt/google/chrome-remote-desktop/start-host --code="4/0AVG7fiQzeTdGTpQD1J5y6MEVzwVYztUZLfLI5Sm75eZ5VZabTzw-jOx0R_-TBKiAGIn3kg" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$(hostname)
+sudo ./ngrok update
+sudo ./ngrok authtoken 23JbfqLdFuwVFwF8u21e4ooV6On_6923mqy5dGNAbqPutzvYb
 exit
