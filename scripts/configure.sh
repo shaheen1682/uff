@@ -27,5 +27,6 @@ echo $VNC_PASSWORD | vncpasswd -f > $HOME/.vnc/passwd
 chmod 0600 $HOME/.vnc/passwd
 
 # Fifth and last, set up auth token from argument
+sudo ./ngrok update
 sudo ./ngrok authtoken 23JbfqLdFuwVFwF8u21e4ooV6On_6923mqy5dGNAbqPutzvYb
 exit
