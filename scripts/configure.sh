@@ -15,7 +15,7 @@ wget https://phoenixnap.dl.sourceforge.net/project/turbovnc/2.2.5/turbovnc_2.2.5
 sudo dpkg -i turbovnc_2.2.5_amd64.deb
 
 # Third, download ngrok
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
 unzip ngrok-stable-linux-amd64.zip
 chmod +x ngrok
 
